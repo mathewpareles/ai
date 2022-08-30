@@ -1,3 +1,5 @@
 # Links to my posts
 
-https://mathewpareles.github.io/machine-learning/
+
+[Thorough derivation of Backpropagation for beginners](https://mathewpareles.github.io/machine-learning/backprop-derivation)
+
