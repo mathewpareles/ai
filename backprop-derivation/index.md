@@ -428,7 +428,7 @@ Note that we cannot learn the activation function like we learn the weights (how
 
 # Conclusion and summary
 
-The process of training an arbitrary NN with Supervised Learning:
+**The process of training an arbitrary NN with Supervised Learning:**
 
 1) Differentiate all the 'blocks' to get <img align="center" src="https://i.upmath.me/svg/%5Cfrac%7B%5Cpartial%20z'%7D%7B%5Cpartial%20z%7D" alt="\frac{\partial z'}{\partial z}" />
 
