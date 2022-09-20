@@ -330,7 +330,7 @@ We can calculate this with indices,
 
 ![zdense NN indices part11](https://user-images.githubusercontent.com/51329589/186349090-6ff0d1e6-feea-421b-b52f-e67a9bb5122e.jpg)
 
-It's better to work with vectors/matrices instead of indices, since we've optimized matrix multiplication algorithms but not indice multiplication (like numpy).
+It's easier for humans to work with vectors/matrices instead of indices, but working with matrices vs. vectors does not affect computation.
 
 We have <img src="https://i.upmath.me/svg/%5B%5Cvec%20a%20%5Ccdot%20%5Cvec%20b%5ET%20%5D_%7Bi%2Cj%7D%20%3D%20a_i%20b_j" alt="[\vec a \cdot \vec b^T ]_{i,j} = a_i b_j" /> (just take <img src="https://i.upmath.me/svg/%5Cvec%20a" alt="\vec a" /> <img src="https://i.upmath.me/svg/%5Cvec%20b%5ET" alt="\vec b^T" /> and multiply them together. You'll get a matrix with those components).
 
