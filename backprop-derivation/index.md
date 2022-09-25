@@ -191,9 +191,9 @@ To help with this issue, there are more effective 'optimization' methods than ju
 
 ### Approaching <img src="https://i.upmath.me/svg/%5Cfrac%7B%5Cpartial%20Loss(%5Cvec%20W%3BS)%7D%7B%5Cpartial%20W%5En%7D" alt="\frac{\partial Loss(\vec W;S)}{\partial W^n}" />; Stochastic gradient descent and the chain rule
 
-To find <img align="center" src="https://i.upmath.me/svg/%5Cfrac%7B%5Cpartial%20Loss(%5Cvec%20W)%7D%7B%5Cpartial%20W%5En%7D" alt="\frac{\partial Loss(\vec W)}{\partial W^n}" />, we could vary each matrix element in <img src="https://i.upmath.me/svg/W%5En" alt="W^n" /> and see how <img src="https://i.upmath.me/svg/Loss" alt="Loss" /> changes. But each of these calculations requires a forward pass. If <img src="https://i.upmath.me/svg/W%5En" alt="W^n" /> is a NxN matrix, we would need <img src="https://i.upmath.me/svg/N%5E2" alt="N^2" /> forward passes. This requires way too much computational power, and does not scale.
+To find <img align="center" src="https://i.upmath.me/svg/%5Cfrac%7B%5Cpartial%20Loss(%5Cvec%20W)%7D%7B%5Cpartial%20W%5En%7D" alt="\frac{\partial Loss(\vec W)}{\partial W^n}" />, we could vary each matrix element in <img src="https://i.upmath.me/svg/W%5En" alt="W^n" /> and see how <img src="https://i.upmath.me/svg/Loss" alt="Loss" /> changes. Each of these calculations requires |S| forward passes. If <img src="https://i.upmath.me/svg/W%5En" alt="W^n" /> is a NxN matrix, we would need |S|<img src="https://i.upmath.me/svg/N%5E2" alt="N^2" /> forward passes. This requires way too much computational power, and does not scale, as the training set size |S|, and matrix dimension N are very large.
 
-Instead, we need to find <img src="https://i.upmath.me/svg/%5Cfrac%7B%5Cpartial%20Loss(%5Cvec%20W%3BS)%7D%7B%5Cpartial%20W%5En%7D" alt="\frac{\partial Loss(\vec W;S)}{\partial W^n}" /> a smarter way.
+We shouldn't calculate <img src="https://i.upmath.me/svg/%5Cfrac%7B%5Cpartial%20Loss(%5Cvec%20W%3BS)%7D%7B%5Cpartial%20W%5En%7D" alt="\frac{\partial Loss(\vec W;S)}{\partial W^n}" /> numerically. We need an easier method, like calculating using matrices.
 
 Note that Loss(W;S) depends on S, so it uses every data point in our training data. 
 
